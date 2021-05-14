@@ -1,0 +1,30 @@
+article {
+	margin-bottom: 4rem;
+}
+
+.circle-group {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle-group span {
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	display: inline-block;
+	background-color: red;
+	border-radius: 200px;
+}
+
+.circle-group span:nth-child(1) {
+	background-color: #FFBBD5;
+}
+
+.circle-group span:nth-child(2) {
+	background-color: #FFED77;
+}
+
+
+.circle-group span:nth-child(3) {
+	background-color: #B394F1;
+}

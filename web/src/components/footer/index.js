@@ -3,7 +3,7 @@ import * as React from "react"
 const Footer = () => (
 	<footer
 		style={{
-			background: `rebeccapurple`,
+			background: `#5A5475`,
 		}}
 	>
 		<div

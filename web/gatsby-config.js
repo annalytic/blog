@@ -33,14 +33,15 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: "gatsby-source-sanity",
       options: {
-        projectId: 'odjn29vm',
-        dataset: 'production',
+        projectId: "odjn29vm",
+        dataset: "production",
         // a token with read permissions is required
         // if you have a private dataset
         token: process.env.MY_SANITY_TOKEN,
-        graphqlTag: 'default',
+        graphqlTag: "default",
+        watchMode: true,
       },
     },
   ],

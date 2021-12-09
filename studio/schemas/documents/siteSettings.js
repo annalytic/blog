@@ -14,5 +14,11 @@ export default {
       title: "Site Description",
       description: "Describe your blog for search engines and social media.",
     },
+    {
+      name: "url",
+      type: "url",
+      title: "URL",
+      description: "The URL of main site.",
+    },
   ],
 };

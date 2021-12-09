@@ -21,12 +21,13 @@ const Layout = ({ children }) => {
       sanitySiteSettings {
         title
       }
+      allSanityAbout
     }
   `)
 
   return (
     <>
-      <Header siteTitle={ data.sanitySiteSettings.title || `Title` } />
+      <Header siteTitle={data.sanitySiteSettings.title || `Title`} />
       <div
         style={{
           margin: `0 auto`,
@@ -34,7 +35,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{ children }</main>
+        <main>{children}</main>
       </div>
       <Footer />
     </>

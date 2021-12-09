@@ -2,30 +2,28 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
-import urlBuilder from "@sanity/image-url";
+import urlBuilder from "@sanity/image-url"
 
 import Layout from "../components/layout"
 import Article from "../components/article"
 import Seo from "../components/seo"
 
 const urlFor = source =>
-  urlBuilder({ projectId: "og13jxpg", dataset: "production" }).image(source);
+  urlBuilder({ projectId: "og13jxpg", dataset: "production" }).image(source)
 
 const serializers = {
   types: {
     figure: props => (
       <figure>
         <img
-          src={urlFor(props.node.asset)
-            .width(600)
-            .url()}
+          src={urlFor(props.node.asset).width(600).url()}
           alt={props.node.alt}
         />
 
         <figcaption>{props.node.caption}</figcaption>
       </figure>
-    )
-  }
+    ),
+  },
 }
 
 const IndexPage = () => {
@@ -44,21 +42,16 @@ const IndexPage = () => {
     }
   `)
 
-  const posts = data.allSanityPost.edges;
+  const posts = data.allSanityPost.edges
 
   return (
     <Layout>
       <Seo title="Home" />
-      { posts.map( post =>
-        <Article post={ post } serializers={ serializers } />
-      ) }
-
-      <p>
-        <Link to="/about/">Om meg</Link> <br />
-        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-      </p>
+      {posts.map(post => (
+        <Article post={post} serializers={serializers} />
+      ))}
     </Layout>
-  );
+  )
 }
 
 export default IndexPage
